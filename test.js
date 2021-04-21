@@ -396,7 +396,7 @@
                 html: U.head.innerHTML
             }), U.table.appendChild(U.foot)) : U.foot && U.table.removeChild(U.table.tFoot), U.wrapper = H("div", {
                 class: "w-full overflow-hidden rounded-lg shadow-xs dataTable-loading"
-            }), W += "<div class='dataTable-top'>", W += V.layout.top, W += "</div>", W += "<div class='dataTable-container'></div>", W += "<div class='dataTable-bottom'>", W += V.layout.bottom, W += "</div>", W = W.replace("{info}", "<div class='dataTable-info flex items-center col-span-3 px-4 py-3 text-xs font-semibold tracking-wide text-gray-500></div>"), V.perPageSelect) {
+            }), W += "<div class='dataTable-top '>", W += V.layout.top, W += "</div>", W += "<div class='dataTable-container'></div>", W += "<div class='dataTable-bottom'>", W += V.layout.bottom, W += "</div>", W = W.replace("{info}", "<div class='dataTable-info flex items-center col-span-3 px-4 py-3 text-xs font-semibold tracking-wide text-gray-500'></div>"), V.perPageSelect) {
             var da = "<div class='dataTable-dropdown'><label>";
             da += V.labels.perPage, da += "</label></div>";
             var ea = H("select", {
@@ -476,7 +476,7 @@
             T.search(this.value)
         })), G(T.wrapper, "click", function(W) {
             var X = W.target;
-            "a" === X.nodeName.toLowerCase() && (X.hasAttribute("data-page") ? (T.page(X.getAttribute("data-page")), W.preventDefault()) : U.sortable && K.contains(X, "dataTable-sorter") && "false" != X.parentNode.getAttribute("data-sortable") && (T.columns().sort(T.activeHeadings.indexOf(X.parentNode) + 1), W.preventDefault()))
+            "a" === X.nodeName.toLowerCase() && (X.hasAttribute("data-page") ? (T.page(X.getAttribute("data-page")), W.preventDefault()) : U.sortable && K.contains(X, "dataTable-sorter text-white") && "false" != X.parentNode.getAttribute("data-sortable") && (T.columns().sort(T.activeHeadings.indexOf(X.parentNode) + 1), W.preventDefault()))
         })
     }, S.setColumns = function(T) {
         var U = this;
@@ -530,7 +530,7 @@
                 Y.style.width = _ + "%", this.columnWidths[Z] = $
             }, this);
             else {
-                T = [], U = H("thead");
+                T = [], U = H("thead ");
                 var V = H("tr", {
                     class: "text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
                 });
